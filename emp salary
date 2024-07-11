@@ -1,0 +1,16 @@
+class Employee:
+    def __init__(self, emp_id, basic_salary, hra, da, cca):
+        self.emp_id = emp_id
+        self.basic_salary = basic_salary
+        self.hra = hra
+        self.da = da
+        self.cca = cca
+    def calculate_salary(self):
+        total_salary = self.basic_salary + self.hra + self.da + self.cca
+        return total_salary
+employee1 = Employee(emp_id=101, basic_salary=50000, hra=10000, da=8000, cca=2000)
+employee2 = Employee(emp_id=102, basic_salary=45000, hra=9000, da=7200, cca=1800)
+employee3 = Employee(emp_id=103, basic_salary=55000, hra=11000, da=8800, cca=2200)
+print(f"Employee {employee1.emp_id} Salary: ${employee1.calculate_salary()}")
+print(f"Employee {employee2.emp_id} Salary: ${employee2.calculate_salary()}")
+print(f"Employee {employee3.emp_id} Salary: ${employee3.calculate_salary()}")
