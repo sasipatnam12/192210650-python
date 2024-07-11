@@ -1,0 +1,8 @@
+def sum_of_digits_until_single_digit(n):
+    while n >= 10:
+        n = sum(int(digit) for digit in str(n))
+    return n
+n_value = int(input("Enter N value: "))
+n_digit_number = int(input(f"Enter {n_value}-digit number: "))
+single_digit_sum = sum_of_digits_until_single_digit(n_digit_number)
+print(f"Sum of {n_value}-digit number: {single_digit_sum}")
