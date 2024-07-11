@@ -1,0 +1,15 @@
+def count_vowels_and_consonants(statement):
+    vowels = set("aeiouAEIOU")
+    consonants = set("bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ")
+    num_vowels = 0
+    num_consonants = 0
+    for char in statement:
+        if char in vowels:
+            num_vowels += 1
+        elif char in consonants:
+            num_consonants += 1
+    return num_vowels, num_consonants
+statement = "welcome to saveetha."
+num_vowels, num_consonants = count_vowels_and_consonants(statement)
+print(f"Number of Vowels: {num_vowels}")
+print(f"Number of Consonants: {num_consonants}")
