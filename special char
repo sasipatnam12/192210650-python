@@ -1,0 +1,11 @@
+import string
+def count_special_characters(statement):
+    special_characters = set(string.punctuation)
+    count = 0
+    for char in statement:
+        if char in special_characters:
+            count += 1
+    return count
+statement = "#&$% is the wishes"
+special_char_count = count_special_characters(statement)
+print(f"Special Characters: {special_char_count}")
